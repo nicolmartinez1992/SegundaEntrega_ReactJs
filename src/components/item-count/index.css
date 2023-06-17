@@ -1,0 +1,17 @@
+.counterContainer{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    height: 30px;
+    width: 30px;
+    border: none;
+}
