@@ -8,7 +8,12 @@ import Typography from '@mui/material/Typography';
 import "./index.css"
 import ItemCount from '../item-count';
 
-const Item = ({ title, price, stock, img, items, onAdd }) => {
+const Item = ({ title, price, stock, img, items }) => {
+
+  const onAddProduct = () => {
+    console.log("Cantidad de productos agregados al carrito", items)
+  }
+
   return (
     <div className="cardContainer">
       <Card sx={{ maxWidth: 345, backgroundColor: "rgba(0, 0, 0, 0.26)" }}>
@@ -28,8 +33,8 @@ const Item = ({ title, price, stock, img, items, onAdd }) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <ItemCount initial={1} stock={10} onAdd={(items) => console.log("Cantidad agregada: ", items)} />
-          <Button style={{ color: "black", fontWeight: "bold", fontFamily: "unset" }} size="small" onClick={() => onAdd(items)} disabled = {!stock}>Add to cart</Button>
+          <ItemCount initial={1} stock={10}/>
+          <Button style={{ color: "black", fontWeight: "bold", fontFamily: "unset" }} size="small" onClick={() => onAddProduct()} disabled={!stock}>Add to cart</Button>
         </CardActions>
       </Card>
     </div>

@@ -17,7 +17,7 @@ const ItemListContainer = ({ greeting }) => {
     }, [])
     return (
         <div>
-            <h1>{greeting}</h1>
+            <h1 style={{alignItems: "center"}}>{greeting="Bienvenidos a TRACTO"}</h1>
             <ItemList products={products} />
         </div>
     )
